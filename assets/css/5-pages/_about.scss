@@ -1,0 +1,24 @@
+/* BEGIN ABOUT */
+.page-template-about {
+
+  .col-4 {
+    text-align: center;
+  }
+
+  @include tablet-xl-min {
+
+    .col-4:first-child {
+      padding-right: 30px;
+    }
+  }
+
+  .about-img {
+    display: inline-block;
+    max-height: 400px;
+
+    @include tablet-xl-min {
+      max-height: none;
+    }
+  }
+}
+/* END ABOUT */

@@ -1,0 +1,37 @@
+/* BEGIN ARCHIVE */
+.archive {
+
+  .section--content {
+
+    .col {
+      overflow: hidden;
+    }
+
+    .col-8 {
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid $lightgray;
+
+      @include tablet-xl-min {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  @include tablet-xl-min {
+    .col-4 {
+      padding-right: 0;
+      margin-bottom: 0;
+      padding-left: 30px;
+    }
+  }
+
+  @include desktop-s-min {
+    .col-4 {
+      padding-left: 45px;
+    }
+  }
+}
+/* END ARCHIVE */

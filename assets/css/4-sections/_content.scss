@@ -1,0 +1,30 @@
+/* BEGIN CONTENT */
+.section--content {
+  text-align: left;
+
+  p.lead {
+    font-weight: 700;
+  }
+
+  p a,
+  a {
+    color: $orange;
+  }
+
+  a.btn-dark {
+    color: $white;
+
+    &:hover {
+      color: $navy;
+    }
+  }
+}
+/* END CONTENT */
+
+/* BEGIN WP-DISCUZ */
+#wc-comment-header,
+#wc_show_hide_loggedin_username,
+#wpcomm {
+  max-width: 100%;
+}
+/* END WP-DISCUZ */

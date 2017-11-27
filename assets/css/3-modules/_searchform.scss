@@ -1,0 +1,61 @@
+/* BEGIN SEARCHFORM */
+.searchform {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+
+  @include phone-xl-min {
+    width: 60%;
+    max-width: 600px;
+  }
+
+  input {
+    color: hsla(0,0%,100%,.7);
+    border: 3px solid $white;
+    background-color: transparent;
+    font-size: 13px;
+    width: 100%;
+    padding: 15px 55px 15px 20px;
+    outline: 0;
+
+    @include phone-xl-min {
+      font-size: 17px;
+      padding: 20px 65px 20px 20px;
+    }
+
+    @include desktop-s-min {
+      font-size: 40px;
+      padding: 20px 100px 20px 20px;
+    }
+  }
+
+  &__submit {
+    color: $white;
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 0;
+    padding: 18px 20px 10px 15px;
+    font-size: 16px;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      color: $orange
+    }
+
+    @include phone-xl-min {
+      padding: 27px 25px 17px 20px;
+    }
+
+    @include desktop-s-min {
+      padding: 36px 30px 30px 30px;
+
+      [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+      [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+        font-size: 40px;
+      }
+    }
+  }
+
+}
+/* END SEARCHFORM */

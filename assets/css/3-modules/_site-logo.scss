@@ -1,0 +1,55 @@
+/* BEGIN SITE-LOGO */
+.site-logo {
+  display: inline-block;
+  margin: 0;
+
+  a {
+    display: block;
+    font-size: 0;
+  }
+
+  img {
+    height: 58px;
+    display: inline-block;
+    vertical-align: top;
+
+    @include tablet-m-min {
+      height: 72px;
+    }
+  }
+
+  &--footer {
+    display: block;
+
+    img {
+      max-height: 32px;
+    }
+
+    a:hover{
+      opacity: 0.7;
+    }
+  }
+}
+
+.home .site-logo {
+
+  img {
+
+    @include phone-xl-min {
+      height: 65px;
+    }
+
+    @include tablet-s-min {
+      height: 72px;
+    }
+
+    @include tablet-m-min {
+      height: 88px;
+    }
+
+    @include tablet-xl-min {
+      height: 105px;
+    }
+  }
+}
+/* END SITE-LOGO */

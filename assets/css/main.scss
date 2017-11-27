@@ -1,0 +1,57 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// 1 - TOOLS
+@import '1-tools/wordpress';
+@import '1-tools/normalize';
+@import '1-tools/fonts';
+@import '1-tools/vars';
+@import '1-tools/responsive';
+@import '1-tools/animations';
+@import '1-tools/swiper.min';
+@import '1-tools/wpcore';
+@import '1-tools/flaticon';
+@import '1-tools/magnific-popup';
+@import '1-tools/blazy';
+
+// 2 - BASICS
+@import '2-basics/body-element';
+@import '2-basics/links';
+@import '2-basics/layout';
+@import '2-basics/typography';
+@import '2-basics/buttons';
+
+
+// 3 - MODULES
+@import '3-modules/site-logo';
+@import '3-modules/primary-nav';
+@import '3-modules/article';
+@import '3-modules/counter';
+@import '3-modules/modals';
+@import '3-modules/searchform';
+@import '3-modules/event';
+@import '3-modules/blockquote';
+@import '3-modules/footer-nav';
+@import '3-modules/formbox';
+@import '3-modules/gallery';
+@import '3-modules/sidebar';
+
+
+// 4 - SECTIONS
+@import '4-sections/site-header';
+@import '4-sections/top-panel';
+@import '4-sections/hero';
+@import '4-sections/articles';
+@import '4-sections/counters';
+@import '4-sections/events';
+@import '4-sections/galleries';
+@import '4-sections/partners';
+@import '4-sections/testimonials';
+@import '4-sections/site-footer';
+@import '4-sections/title';
+@import '4-sections/content';
+
+
+// 5 - PAGES
+@import '5-pages/about';
+@import '5-pages/gallery';
+@import '5-pages/archive';

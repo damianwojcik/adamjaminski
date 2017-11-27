@@ -1,0 +1,110 @@
+/* BEGIN HERO */
+.section--hero {
+  display: none;
+
+  .home & {
+    display: block;
+  }
+
+  margin-top: -20px;
+
+  .container {
+    padding-bottom: 0;
+
+    @include tablet-s-min {
+      padding-top: 0;
+    }
+  }
+
+  @include tablet-s-min {
+    padding-bottom: 0;
+  }
+
+  h2 {
+    color: $orange;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 17px;
+
+    @include phone-xl-min {
+      font-size: 28px;
+    }
+
+    @include tablet-sm-min {
+      font-size: 32px;
+    }
+
+    @include tablet-xl-min {
+      font-size: 34px;
+    }
+
+    @include desktop-s-min {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    color: $white;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    @include tablet-sm-min {
+      font-size: 16px;
+    }
+  }
+
+  .wrap {
+    margin-top: 5px;
+    margin-bottom: 45px;
+    padding: 0 10px;
+
+    @include tablet-s-min {
+      margin-top: 50px;
+      text-align: left;
+    }
+
+    @include tablet-xl-min {
+      margin-top: 115px;
+    }
+  }
+
+  .col-7 {
+    display: none;
+
+    @include tablet-s-min {
+      display: block;
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .col-5 {
+    @include tablet-s-min {
+      padding-left: 30px;
+      width: 50%;
+      float: left;
+    }
+
+    @include tablet-xl-min {
+      padding: 0 65px;
+    }
+  }
+
+  .img-person {
+    height: 400px;
+    position: relative;
+    bottom: 0;
+    display: block;
+    float: right;
+
+    @include tablet-s-min {
+      height: 500px;
+    }
+
+    @include tablet-xl-min {
+      height: 650px;
+    }
+  }
+}
+/* END HERO */

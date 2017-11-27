@@ -1,0 +1,72 @@
+/* BEGIN SIDEBAR */
+
+/* END SIDEBAR */
+
+/* BEGIN SIDEBAR--BLOG */
+.sidebar--blog {
+  text-align: center;
+
+  @include tablet-xl-min {
+    text-align: left;
+  }
+
+  h5 {
+    text-transform: uppercase;
+    font-weight: 800;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    li {
+      display: block;
+      margin-bottom: 10px;
+
+      a {
+        color: $navy;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .post-date {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $darkgray;
+    line-height: 1;
+  }
+
+  .tagcloud {
+
+    a {
+      color: $white;
+      font-size: 11px !important;
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 16px;
+      float: left;
+      padding: 2px 6px;
+      margin: 0 4px 4px 0;
+      background-color: $navy;
+      display: inline;
+
+      &:hover {
+        color: $orange;
+      }
+
+      &:before {
+        content: '#';
+      }
+    }
+  }
+}
+/* END SIDEBAR--BLOG */

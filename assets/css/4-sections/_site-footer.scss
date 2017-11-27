@@ -1,0 +1,98 @@
+/* BEGIN SITE-HEADER */
+.site-footer {
+  background-color: $black;
+  display: block;
+  overflow: hidden;
+
+  @include phone-xl-min {
+    text-align: center;
+  }
+
+  @include tablet-xl-min {
+    text-align: left;
+  }
+
+  .col-8 {
+    width: auto;
+  }
+
+  .col {
+    margin-bottom: 20px;
+
+    @include tablet-xl-min {
+      margin-bottom: 0;
+      float: left;
+      display: inline-block;
+    }
+  }
+
+  .container {
+    padding-top: 28px;
+    padding-bottom: 25px;
+  }
+
+  .primary-nav {
+    display: block;
+  }
+
+  @include tablet-xl-min {
+    .col-1 {
+      margin-right: 40px;
+    }
+
+    .col-8 {
+      margin-right: 10px;
+    }
+  }
+
+  .row-mobile {
+    position: initial;
+
+    @include tablet-xl-min {
+      float: left;
+      display: inline-block;
+      width: auto;
+    }
+
+    .col {
+      margin-bottom: 0;
+      display: inline-block;
+    }
+
+    .col-1 {
+      float: left;
+    }
+
+    .col-2 {
+      float: right;
+
+      @include tablet-xl-min {
+        position: absolute;
+        right: 0;
+        top: 5px;
+      }
+    }
+  }
+
+  .copy {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 26px;
+    margin: 0;
+    letter-spacing: 1px;
+
+    @include tablet-xl-min {
+      font-size: 12px;
+    }
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+/* END SITE-HEADER */

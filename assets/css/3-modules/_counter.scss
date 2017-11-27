@@ -1,0 +1,37 @@
+/* BEGIN COUNTER */
+.counter {
+  background-color: $white;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+  padding: 35px 15px;
+  text-align: center;
+
+  &__icon {
+    display: block;
+    color: $black;
+    margin-bottom: 15px;
+  }
+
+  [class*=" flaticon-"]:after, [class*=" flaticon-"]:before, [class^=flaticon-]:after, [class^=flaticon-]:before {
+    font-size: 45px;
+    line-height: 1;
+  }
+
+  &__title {
+    display: block;
+    color: $orange;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 17px;
+  }
+
+  &__description {
+    display: block;
+    color: $black;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+/* END COUNTER */

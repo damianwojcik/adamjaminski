@@ -1,0 +1,29 @@
+/* BEGIN TOP-PANEL */
+.section--top-panel {
+  text-align: left;
+
+  .container {
+    padding: 0 15px 15px 15px;
+
+    @include tablet-s-min {
+      padding-bottom: 30px;
+      padding-top: 15px;
+    }
+  }
+}
+
+.home .section--top-panel {
+
+  .container {
+    padding: 0 15px 0 15px;
+
+    @include tablet-s-min {
+      padding: 15px 30px;
+    }
+
+    @include tablet-xl-min {
+      padding-bottom: 0;
+    }
+  }
+}
+/* END TOP-PANEL */

@@ -1,0 +1,96 @@
+/* BEGIN BUTTONS */
+.btn {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  font-size: 11px;
+  padding: 10px 18px;
+  line-height: 1;
+  font-weight: 700;
+  color: $white;
+  font-family: $poppins;
+  border: 3px solid $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: 0;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+
+  @include tablet-xl-min {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  &:hover {
+    background-color: $white;
+    color: $navy;
+  }
+}
+
+.btn-navy {
+  color: $navy;
+  border-color: $navy;
+
+  &:hover {
+    background-color: $navy;
+    color: $white;
+  }
+}
+
+.btn-dark {
+  background-color: $navy;
+  border-color: $navy;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $navy;
+  }
+}
+
+button {
+  border: 0;
+  outline: 0;
+  display: block;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.js-toggle-nav {
+  position: absolute;
+  right: 0;
+  top: 15px;
+  z-index: 9999;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  transition: all 0.4s ease-in-out;
+
+  &__line,
+  &:before, &:after {
+    display: block;
+    content: '';
+    width: 35px;
+    position: absolute;
+    background-color: $white;
+    height: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.4s ease-in-out;
+  }
+
+  &:before {
+    transform: translateY(9px);
+  }
+
+  &:after {
+    transform: translateY(-9px);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+/* END BUTTONS */

@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  outline: 0;
+  transition: all 0.4s ease-in-out;
+  color: $navy;
+
+  &:hover, &:active, &:visited, &:focus {
+  text-decoration: none;
+  }
+}

@@ -1,0 +1,21 @@
+/* BEGIN ARTICLES */
+.section--articles {
+
+  .col-4:last-child {
+    display: none;
+
+    @include tablet-xl-min {
+      display: block;
+      margin-bottom: 0;
+    }
+  }
+
+  .col-4:nth-child(2){
+    margin-bottom: 0;
+
+    @include tablet-xl-min {
+      margin-bottom: 30px;
+    }
+  }
+}
+/* END ARTICLES */

@@ -1,0 +1,30 @@
+/* BEGIN TESTIMONIALS */
+.section--testimonials {
+  color: $white;
+  overflow: hidden;
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background: url('assets/img/videomask.png') repeat center;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 2;
+  }
+
+  .container {
+    z-index: 9;
+  }
+
+}
+/* END TESTIMONIALS */

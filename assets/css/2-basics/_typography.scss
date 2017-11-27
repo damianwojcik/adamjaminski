@@ -1,0 +1,124 @@
+/* BEGIN TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+  font-family: $poppins;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
+  font-size: 24px;
+}
+h4,
+.h4 {
+  font-size: 18px;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+small,
+.small {
+  font-size: 85%;
+}
+
+strong {
+	font-weight: 700;
+}
+
+hr {
+  border-style: solid;
+  margin: 20px 0;
+}
+
+.offscreen {
+	left: -1000em;
+	position: absolute;
+}
+
+.screen-reader-text {
+  clip: rect(1px,1px,1px,1px);
+  position: absolute!important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.content__title {
+  text-transform: uppercase;
+  font-family: $poppins;
+  font-weight: 800;
+  color: $darknavy;
+  display: inline-block;
+  margin-bottom: 35px;
+  position: relative;
+  margin-top: 0;
+  font-size: 23px;
+
+  @include tablet-sm-min {
+    font-size: 28px;
+    margin-bottom: 45px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    left: 0;
+    bottom: -10px;
+    background-color: $orange;
+  }
+}
+/* BEGIN TYPOGRAPHY */

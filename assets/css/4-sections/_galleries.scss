@@ -1,0 +1,86 @@
+/* BEGIN GALLERIES */
+.section--galleries {
+  background-size: cover;
+  text-transform: uppercase;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .wrap {
+    color: $white;
+    display: table;
+    width: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $orange;
+      .wrap__inner {
+        background-color: rgba(46, 81, 112, 0.4);
+      }
+    }
+
+    &__inner {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 100px 0;
+      z-index: 99;
+      background-color: transparent;
+      transition: all 0.4s ease-in-out;
+    }
+
+    &__icon,
+    &__title {
+      display: block;
+
+      @include phone-xl-min {
+        display: inline-block;
+      }
+    }
+
+    &__icon {
+      margin-bottom: 20px;
+
+      @include phone-xl-min {
+        margin: 0 30px 0 0;
+      }
+    }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+      font-size: 45px;
+
+      @include phone-xl-min {
+        font-size: 55px;
+      }
+
+      @include tablet-sm-min {
+        font-size: 60px;
+      }
+
+      @include desktop-s-min {
+        font-size: 70px;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      margin: 0;
+
+      @include phone-xl-min {
+        font-size: 24px;
+        position: relative;
+        top: -12px;
+      }
+
+      @include tablet-sm-min {
+        font-size: 28px;
+      }
+
+      @include desktop-s-min {
+        font-size: 40px;
+      }
+    }
+  }
+}
+/* END GALLERIES */

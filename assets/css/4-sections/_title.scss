@@ -1,0 +1,19 @@
+/* BEGIN TITLE */
+.section--title {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $darknavy;
+    opacity: 0.6;
+  }
+}
+/* END TITLE */

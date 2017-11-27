@@ -1,0 +1,141 @@
+/* BEGIN PARTNERS */
+.section--partners {
+  background-color: $navy;
+  text-align: center;
+
+  @include tablet-xl-min {
+    background-color: $black;
+  }
+
+  .container,
+  .row {
+    display: block;
+  }
+
+  .row {
+    @include tablet-xl-min {
+      display: flex;
+      height: 200px;
+    }
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .container {
+    @include tablet-xl-min {
+      padding: 0 50px 0 0;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: -999px;
+        top: 0;
+        height: 100%;
+        width: 1000px;
+        background: $navy;
+      }
+    }
+  }
+
+  .section__title {
+    color: $white;
+
+    @include tablet-xl-min {
+      margin-bottom: 0;
+    }
+  }
+
+  @include tablet-xl-min {
+    .col {
+      float: left;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .col-4 {
+      width: 33.34%;
+      padding-right: 0;
+      background-color: $navy;
+    }
+
+    .col-6 {
+      width: calc(66.66% - 170px);
+
+      &:before {
+        content: "";
+        background-color: $black;
+        width: 280px;
+        height: 100%;
+        -webkit-transform: skew(-20deg);
+        transform: skew(-20deg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+    }
+
+    .col-2 {
+      width: 170px;
+      justify-content: flex-end;
+
+      .btn {
+        white-space: normal;
+        line-height: 1.4;
+        font-size: 16px;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+
+  .col-4 {
+    margin-bottom: 0;
+  }
+
+  .col-6 {
+    margin-bottom: 35px;
+
+    @include tablet-xl-min {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+
+      &:hover {
+          opacity: 0.5;
+      }
+    }
+
+    img {
+      max-height: 80px;
+
+      @include tablet-xl-min {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+/* END PARTNERS */
