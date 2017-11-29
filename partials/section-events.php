@@ -3,16 +3,33 @@
     $title = get_field('section_events_title', 'option');
     $events = get_field('event', 'option');
     $order = array();
+    $now = new DateTime();
 
-    if( $events ):
+    if( $events ) {
 
-        foreach( $events as $i => $row ) {
+        // sort event by date asc
+        foreach ($events as $i => $row) {
 
-            $order[ $i ] = new DateTime($row['date']);
+            $order[$i] = new DateTime($row['date']);
 
         }
 
-        array_multisort( $order, SORT_ASC, $events );
+        array_multisort($order, SORT_ASC, $events);
+
+        // remove events from past
+        foreach ($events as $i => $event) {
+
+            if (new DateTime($event['date']) < $now) {
+
+                unset($events[$i]);
+
+            }
+
+        }
+
+    }
+
+    if ($events) {
 
 ?>
 
@@ -33,14 +50,11 @@
                         <?php foreach($events as $event) {
 
                             $date = $event['date'];
-                            $dateObj = new DateTime($date);
                             $title = $event['title'];
                             $description = $event['description'];
                             $link = $event['link'];
                             $dateStr = strtotime($date);
-                            $now = new DateTime();
-
-                            if($dateObj > $now) {
+                            $dateObj = new DateTime($event['date']);
 
                         ?>
 
@@ -93,7 +107,7 @@
                             </div>
                             <!-- /.swiper-slide -->
 
-                        <?php } } //end foreach?>
+                        <?php } //end foreach?>
 
                     </div>
                     <!-- /.swiper-wrapper -->
@@ -112,4 +126,4 @@
     </div>
     <!-- /.section section-events -->
 
-<?php endif; ?>
+<?php } // end if?>
