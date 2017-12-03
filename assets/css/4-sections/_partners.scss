@@ -3,10 +3,6 @@
   background-color: $navy;
   text-align: center;
 
-  @include tablet-xl-min {
-    background-color: $black;
-  }
-
   .container,
   .row {
     display: block;
@@ -52,7 +48,7 @@
         top: 0;
         height: 100%;
         width: 1000px;
-        background: $navy;
+        background: $black;
       }
     }
   }
@@ -76,7 +72,7 @@
     .col-4 {
       width: 33.34%;
       padding-right: 0;
-      background-color: $navy;
+      background-color: $black;
     }
 
     .col-6 {
@@ -84,7 +80,7 @@
 
       &:before {
         content: "";
-        background-color: $black;
+        background-color: $navy;
         width: 280px;
         height: 100%;
         -webkit-transform: skew(-20deg);
@@ -131,10 +127,6 @@
 
     img {
       max-height: 80px;
-
-      @include tablet-xl-min {
-        filter: invert(100%);
-      }
     }
   }
 }

@@ -28,7 +28,7 @@
                             $content = $post->post_content;
                             $category = get_the_category();
                             $category_name = $category[0]->name;
-                            $trimmed_content = mb_strimwidth($content, 0, 700, '...');
+                            $trimmed_content = wp_trim_words( $content, 75 );
                             $date = get_the_date();
 
                     ?>

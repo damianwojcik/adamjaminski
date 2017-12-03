@@ -10,6 +10,7 @@ $desktop-ls: 1550px;
 $desktop-m: 1440px;
 $desktop-sm: 1400px;
 $desktop-s: 1280px;
+$desktop-xs: 1200px;
 $tablet-xl: 1024px;
 $tablet-l: 960px;
 $tablet-m: 840px;
@@ -94,8 +95,20 @@ $iphone: 320px;
   }
 }
 
+@mixin desktop-xs {
+  @media (max-width: #{$desktop-xs}) {
+    @content;
+  }
+}
+
 @mixin desktop-s-min {
   @media (min-width: #{$desktop-s}) {
+    @content;
+  }
+}
+
+@mixin desktop-xs-min {
+  @media (min-width: #{$desktop-xs}) {
     @content;
   }
 }

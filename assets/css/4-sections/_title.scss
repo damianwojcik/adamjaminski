@@ -15,5 +15,21 @@
     background-color: $darknavy;
     opacity: 0.6;
   }
+
+  .container {
+
+    @include tablet-sm-min {
+      margin: 0 auto;
+      width: 720px;
+    }
+
+    @include tablet-l-min {
+      width: 780px;
+    }
+
+    @include desktop-xs-min {
+      width: 750px;
+    }
+  }
 }
 /* END TITLE */
