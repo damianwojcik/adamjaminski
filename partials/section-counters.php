@@ -31,7 +31,7 @@ if( have_rows('section_counters') ):
 
             ?>
 
-                    <div class="col col-3">
+                    <div class="col col-2">
 
                         <div class="counter">
 

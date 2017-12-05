@@ -10,8 +10,17 @@
 
     if($posts_array) {
 
+        $posts_num = count($posts_array);
+
 ?>
-        <div class="section section--articles">
+        <div class="section section--articles
+        <?php if($posts_num == 1) {
+            echo 'section--articles--single';
+        } else if ($posts_num == 2) {
+            echo 'section--articles--double';
+        } ?>
+
+        ">
 
             <div class="container">
 
@@ -28,7 +37,7 @@
                             $content = $post->post_content;
                             $category = get_the_category();
                             $category_name = $category[0]->name;
-                            $trimmed_content = wp_trim_words( $content, 75 );
+                            $trimmed_content = wp_trim_words( $content, 90 );
                             $date = get_the_date();
 
                     ?>
@@ -60,11 +69,11 @@
                                     </div>
                                     <!--/.article__tile -->
 
-                                    <time datetime="<?php echo get_the_date('c'); ?>" class="article__date">
-                                        <?php echo $date; ?>
-                                    </time>
-
                                     <div class="article__wrap">
+
+                                        <time datetime="<?php echo get_the_date('c'); ?>" class="article__date">
+                                            <?php echo $date; ?>
+                                        </time>
 
                                         <h2 class="article__title">
                                             <?php echo $title; ?>

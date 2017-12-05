@@ -46,7 +46,7 @@
   }
 
   .row-mobile {
-    position: initial;
+    position: static;
 
     @include tablet-xl-min {
       float: left;

@@ -6,7 +6,7 @@
 .container {
   display: table;
   width: 100%;
-  padding: 30px 15px;
+  padding: 30px 10px;
   position: relative;
 
   @include phone-xl-min {
@@ -39,23 +39,25 @@
   position: relative;
 }
 
-.col-4 {
+.col-2 {
   margin-bottom: 30px;
 
-  @include tablet-xl-min {
-    width: 33.33%;
+  @include desktop-xs-min {
+    width: 20%;
     float: left;
 
     &:first-child {
-      padding-right: 15px;
+      padding-right: 10px;
     }
 
-    &:nth-child(2) {
-      padding: 0 15px;
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      padding: 0 10px;
     }
 
     &:last-child {
-      padding-left: 15px;
+      padding-left: 10px;
     }
   }
 }
@@ -90,6 +92,27 @@
 
     &:nth-child(2),
     &:nth-child(3) {
+      padding: 0 15px;
+    }
+
+    &:last-child {
+      padding-left: 15px;
+    }
+  }
+}
+
+.col-4 {
+  margin-bottom: 30px;
+
+  @include tablet-xl-min {
+    width: 33.33%;
+    float: left;
+
+    &:first-child {
+      padding-right: 15px;
+    }
+
+    &:nth-child(2) {
       padding: 0 15px;
     }
 

@@ -8,6 +8,10 @@
     display: block;
   }
 
+  .col-2 {
+    margin-bottom: 0;
+  }
+
   .row {
     @include tablet-xl-min {
       display: flex;

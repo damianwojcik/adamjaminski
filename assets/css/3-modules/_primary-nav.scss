@@ -60,10 +60,10 @@
 
       @include tablet-l-min {
         padding: 15px 10px;
-      }
 
-      &:hover {
-        color: $orange;
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }

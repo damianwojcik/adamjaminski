@@ -1,7 +1,7 @@
 /* BEGIN ARTICLES */
 .section--articles {
 
-  .col-4:last-child {
+  .col-4:nth-child(3) {
     display: none;
 
     @include tablet-xl-min {
@@ -15,6 +15,39 @@
 
     @include tablet-xl-min {
       margin-bottom: 30px;
+    }
+  }
+}
+
+.section--articles--single {
+
+  .col-4 {
+    width: 100%;
+    padding: 0;
+  }
+
+  @include tablet-xl-min {
+
+    .article__tile {
+      width: 40%;
+      float: left;
+      margin-right: 45px;
+    }
+
+    .article__wrap {
+      height: auto !important;
+      width: calc(60% - 45px);
+      float: left;
+    }
+  }
+}
+
+.section--articles--double {
+
+  .col-4 {
+
+    @include tablet-xl-min {
+      width: 50%;
     }
   }
 }
