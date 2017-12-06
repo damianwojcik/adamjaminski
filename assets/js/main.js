@@ -129,6 +129,7 @@ jQuery(document).ready(function () {
             centeredSlides: true,
             lazy: true,
             preloadImages: false,
+            loop: true,
             spaceBetween: 30,
             autoplay: {
                 delay: 3000,
