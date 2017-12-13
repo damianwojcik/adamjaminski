@@ -12,9 +12,9 @@
 
         <div class="mask"></div>
 
-        <video muted loop autoplay playsinline poster="<?= THEME_URL; ?>/assets/img/run2.jpg">
-			<source type="video/mp4" src="<?= THEME_URL; ?>/assets/img/run2e.mp4">
-			<source type="video/mp4" src="<?= THEME_URL; ?>/assets/img/run2.webm">
+        <video class="b-lazy" muted loop autoplay playsinline poster="<?= THEME_URL; ?>/assets/img/run2.jpg">
+			<source data-src="<?= THEME_URL; ?>/assets/img/run2e.mp4" type="video/mp4">
+			<source data-src="<?= THEME_URL; ?>/assets/img/run2.webm" type="video/webm">
 		</video>
 
         <h1 class="offscreen">Cytaty</h1>
