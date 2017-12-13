@@ -2269,9 +2269,9 @@ button {
   .blockquote:before {
     content: "“";
     position: absolute;
-    left: -5px;
+    left: 0;
     top: -20px;
-    font-size: 120px;
+    font-size: 110px;
     font-family: "Poppins", sans-serif;
     font-weight: 800; }
     @media (min-width: 1024px) {
@@ -2880,8 +2880,10 @@ button {
     background: url("assets/img/videomask.png") repeat center; }
   .section--testimonials video {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     min-height: 100%;
     min-width: 100%;
     z-index: 2; }
