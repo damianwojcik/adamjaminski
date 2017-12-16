@@ -207,10 +207,19 @@
 
 /* BEGIN ARTICLE--ARCHIVE */
 .section--content .article--archive {
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $lightgray;
+
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 
   @include tablet-xl-min {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
 
   .article__content {
