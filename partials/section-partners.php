@@ -31,7 +31,7 @@
 
                                     <a href="<?php the_sub_field('link'); ?>" target="_blank">
 
-                                        <img class="swiper-lazy" data-src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">
+                                        <img class="swiper-lazy" data-src="<?php echo $logo['sizes']['thumbnail']; ?>" alt="<?php echo $logo['alt']; ?>">
 
                                     </a>
 

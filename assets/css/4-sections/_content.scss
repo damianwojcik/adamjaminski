@@ -14,6 +14,15 @@
       color: $navy;
     }
   }
+
+  .alignleft,
+  .alignright {
+    margin: 20px 0 0 0;
+
+    @include tablet-xl-min {
+      margin-top: 30px;
+    }
+  }
 }
 /* END CONTENT */
 

@@ -95,9 +95,12 @@
 
                     <?php endwhile; ?>
 
-                    <span class="alignleft"><?php next_posts_link( 'Poprzednie' ); ?></span>
-                    <span class="alignright"><?php previous_posts_link( 'Następne' ); ?></span>
+                    <?php if( get_previous_posts_link() || get_next_posts_link() ) { ?>
 
+                        <span class="alignleft"><?php next_posts_link( 'Poprzednie' ); ?></span>
+                        <span class="alignright"><?php previous_posts_link( 'Następne' ); ?></span>
+
+                    <?php } // end if ?>
 
                     <?php else : ?>
 
