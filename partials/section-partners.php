@@ -29,7 +29,7 @@
 
                                 <div class="swiper-slide">
 
-                                    <a href="<?php the_sub_field('link'); ?>" target="_blank">
+                                    <a href="<?php the_sub_field('link'); ?>" target="_blank" rel="noopener">
 
                                         <img class="swiper-lazy" data-src="<?php echo $logo['sizes']['thumbnail']; ?>" alt="<?php echo $logo['alt']; ?>">
 

@@ -41,7 +41,7 @@
 
                         <?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
-                            <li><a href="<?php the_sub_field('link'); ?>" target="_blank"><span class="<?php the_sub_field('icon'); ?>"></span></a></li>
+                            <li><a href="<?php the_sub_field('link'); ?>" target="_blank" rel="noopener"><span class="<?php the_sub_field('icon'); ?>"></span></a></li>
 
                         <?php endwhile; ?>
 

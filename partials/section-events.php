@@ -64,7 +64,7 @@
 
                                     <?php if( ( !empty($link) ) ): ?>
 
-                                        <a href="<?php echo $link; ?>" class="event__link" target="_blank">
+                                        <a href="<?php echo $link; ?>" class="event__link" target="_blank" rel="noopener">
 
                                     <?php endif; ?>
 

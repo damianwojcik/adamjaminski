@@ -55,7 +55,7 @@
 
                                 <?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
-                                    <li><a href="<?php the_sub_field('link'); ?>" target="_blank"><span class="<?php the_sub_field('icon'); ?>"></span></a></li>
+                                    <li><a href="<?php the_sub_field('link'); ?>" target="_blank" rel="noopener"><span class="<?php the_sub_field('icon'); ?>"></span></a></li>
 
                                 <?php endwhile; ?>
 
@@ -72,7 +72,7 @@
                 <div class="col col-2">
 
                     <p class="copy">
-                        <?php echo current_time('Y'); ?> &copy; <a href="http://damianwojcik.it" target="_blank">damianwojcik.it</a>
+                        <?php echo current_time('Y'); ?> &copy; <a href="http://damianwojcik.it" target="_blank" rel="noopener">damianwojcik.it</a>
                     </p>
 
                 </div>

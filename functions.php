@@ -14,6 +14,4 @@ include("incl/acf.php");
 
 include("incl/cpt.php");
 
-//include("incl/helpers.php");
-
 include("incl/widgets.php");
