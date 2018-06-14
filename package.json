@@ -1,18 +1,17 @@
 {
   "name": "adamjaminski",
   "author": "damianwojcik.it",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "adamjaminski",
   "main": "gulpfile.js",
   "devDependencies": {
     "browser-sync": "*",
-    "gulp": "*",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "*",
     "gulp-clean-css": "*",
-    "gulp-concat": "*",
-    "gulp-rename": "*",
     "gulp-sass": "*",
-    "gulp-uglify": "*"
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

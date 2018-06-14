@@ -1,50 +1,49 @@
-var gulp = require("gulp");
-var browserSync = require("browser-sync");
-var sass = require("gulp-sass");
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var rename = require('gulp-rename');
-var uglify = require('gulp-uglify');
-var cleanCSS = require('gulp-clean-css');
+const gulp = require('gulp');
+const server = require('browser-sync').create();
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
 
-gulp.task("reload", function() {
-    browserSync.reload();
-});
+const paths = {
+    styles: {
+        src: 'assets/css/**/*.+(scss|sass)',
+        dest: './'
+    }
+}
 
-gulp.task("serve", ["sass"], function() {
-    browserSync({
-        server: {
-            baseDir: "./"
-        }
-    });
-    gulp.watch("*.html", ["reload"]);
-    // gulp.watch("assets/js/**/*.js", ["scripts"]);
-    gulp.watch("assets/css/**/*.+(scss|sass)", ["sass"]);
-});
+function reload(done) {
+    server.reload();
+    done();
+}
 
-gulp.task("sass", function() {
-    gulp.src("assets/css/**/*.+(scss|sass)")
-        .pipe(sass().on("error", sass.logError))
+function styles() {
+    return gulp.src(paths.styles.src)
+        // .pipe(sourcemaps.init())
+        .pipe(sass()).on('error', sass.logError)
         .pipe(autoprefixer({
             browsers: ['> 1%']
         }))
-        .pipe(gulp.dest("./"))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(cleanCSS({
+            compatibility: 'ie8'
+        }))
+        // .pipe(sourcemaps.write())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest("./"))
-        .pipe(browserSync.stream());
-});
+        .pipe(gulp.dest(paths.styles.dest))
+        .pipe(server.stream())
+}
 
-// gulp.task('scripts', function() {
-//     return gulp.src("assets/js/**/*.js")
-//         .pipe(concat('scripts.js'))
-//         .pipe(gulp.dest("./"))
-//         .pipe(rename('scripts.min.js'))
-//         .pipe(uglify())
-//         .pipe(gulp.dest("./"))
-//         .pipe(browserSync.stream());
-// });
+function serve(done) {
+    server.init({
+        server: "./"
+    })
+    done();
+    gulp.watch(paths.styles.src, styles)
+    gulp.watch('*.html', reload)
+}
 
-gulp.task("default", ["serve"]);
+gulp.task('default', serve)
