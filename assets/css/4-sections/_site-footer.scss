@@ -4,6 +4,10 @@
   display: block;
   overflow: hidden;
 
+  a {
+    color: $white;
+  }
+
   @include phone-xl-min {
     text-align: center;
   }

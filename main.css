@@ -1645,6 +1645,8 @@ button {
 
 .js-toggle-nav {
   position: absolute;
+  font-size: 0;
+  line-height: 0;
   right: 0;
   top: 15px;
   z-index: 9999;
@@ -1899,7 +1901,7 @@ button {
     margin-bottom: 25px; }
   .article__date {
     display: block;
-    color: #a4a4a4;
+    color: #717171;
     font-size: 12px;
     line-height: 1;
     text-transform: uppercase;
@@ -2451,7 +2453,7 @@ button {
     display: block;
     font-size: 12px;
     text-transform: uppercase;
-    color: #a4a4a4;
+    color: #717171;
     line-height: 1; }
   .sidebar--blog .tagcloud a {
     color: #FFF;
@@ -2472,10 +2474,16 @@ button {
 /* END SIDEBAR--BLOG */
 /* BEGIN SITE-HEADER */
 .site-header {
-  background-image: url("assets/img/bg-header.jpg");
+  background-image: url("assets/img/bg-header-small.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media (min-width: 600px) {
+    .site-header {
+      background-image: url("assets/img/bg-header-medium.jpg"); } }
+  @media (min-width: 1024px) {
+    .site-header {
+      background-image: url("assets/img/bg-header.jpg"); } }
 
 /* END SITE-HEADER */
 /* BEGIN TOP-PANEL */
@@ -2826,6 +2834,8 @@ button {
   background-color: #000;
   display: block;
   overflow: hidden; }
+  .site-footer a {
+    color: #FFF; }
   @media (min-width: 600px) {
     .site-footer {
       text-align: center; } }

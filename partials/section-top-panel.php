@@ -26,6 +26,8 @@
 
                     <span class="js-toggle-nav__line"></span>
 
+                    Otwórz nawigację
+
                 </button>
                 <!-- /.js-toggle-nav-->
 

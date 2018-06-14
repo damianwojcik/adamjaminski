@@ -55,7 +55,12 @@
 
                                 <?php while( have_rows('social_media', 'option') ): the_row(); ?>
 
-                                    <li><a href="<?php the_sub_field('link'); ?>" target="_blank" rel="noopener"><span class="<?php the_sub_field('icon'); ?>"></span></a></li>
+                                    <li>
+                                        <a href="<?php the_sub_field('link'); ?>" target="_blank" rel="noopener">
+                                            <span class="<?php the_sub_field('icon'); ?>" aria-hidden="true"></span>
+                                            <span class="offscreen"><?php the_sub_field('name'); ?></span>
+                                        </a>
+                                    </li>
 
                                 <?php endwhile; ?>
 

@@ -1,8 +1,16 @@
 /* BEGIN SITE-HEADER */
 .site-header {
-  background-image: url('assets/img/bg-header.jpg');
+  background-image: url('assets/img/bg-header-small.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include phone-xl-min {
+    background-image: url('assets/img/bg-header-medium.jpg');
+  }
+
+  @include tablet-xl-min {
+    background-image: url('assets/img/bg-header.jpg');
+  }
 }
 /* END SITE-HEADER */
