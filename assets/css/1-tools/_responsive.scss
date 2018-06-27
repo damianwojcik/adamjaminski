@@ -24,11 +24,6 @@ $iphone: 320px;
 
 
 /* BEGIN MIXINS */
-@mixin page-width-min {
-  @media (min-width: #{$page-width}) {
-    @content;
-  }
-}
 @mixin page-width {
   @media (max-width: #{$page-width}) {
     @content;
