@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
 const rename = require('gulp-rename');
 const purge = require('gulp-css-purge');
 const critical = require('critical').stream;
@@ -77,9 +76,6 @@ gulp.task('styles', function() {
             browsers: ['last 2 versions']
         }))
         .pipe(gulp.dest('./'))
-        .pipe(cleanCSS({
-            compatibility: 'ie8'
-        }))
         .pipe(purge())
         .pipe(rename({
             suffix: '.min'

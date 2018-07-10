@@ -2797,7 +2797,7 @@ button {
 /* END EVEBTS */
 /* BEGIN GALLERIES */
 .section--galleries {
-  background-size: cover;
+  background-size: cover !important;
   text-transform: uppercase;
   background-position: center;
   background-repeat: no-repeat; }
