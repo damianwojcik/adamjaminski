@@ -4,14 +4,9 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const purge = require('gulp-css-purge');
-const critical = require('critical').stream;
-const workboxBuild = require('workbox-build');
-const imagemin = require('gulp-imagemin');
-const cache = require('gulp-cache');
 const uglify = require('gulp-uglify-es').default;
 const plumber = require('gulp-plumber');
 const concat = require('gulp-concat');
-const size = require('gulp-size');
 
 const orderedScriptFiles = [
     'assets/js/jquery.magnific-popup.min.js',
@@ -32,22 +27,6 @@ gulp.task('browser-sync', function() {
   
 gulp.task('bs-reload', function () {
     browserSync.reload();
-});
-
-gulp.task('critical', function () {
-    return gulp.src('src/*.html')
-        .pipe(plumber({
-            errorHandler: function (error) {
-            console.log(error.message);
-            this.emit('end');
-        }}))
-        .pipe(critical({
-            base: 'dist/',
-            inline: true,
-            ignore: ['@font-face',/url\(/]
-        }))
-        .pipe(gulp.dest('dist'))
-        .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('scripts', function() {
@@ -85,6 +64,6 @@ gulp.task('styles', function() {
 });
 
 gulp.task('default', ['browser-sync'], () => {
-    gulp.watch("assets/css/**/*.scss", ['styles']);
+    gulp.watch("assets/css/**/*.+(scss|sass)", ['styles']);
     gulp.watch("assets/js/**/*.js", ['scripts']);
 });
