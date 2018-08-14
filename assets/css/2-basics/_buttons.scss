@@ -74,25 +74,28 @@ button {
     display: block;
     content: '';
     width: 35px;
-    position: absolute;
     background-color: $white;
     height: 3px;
     left: 0;
     right: 0;
     margin: auto;
-    transition: all 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  &:before, &:after {
+    position: absolute;
+  }
+
+  &__line {
+    position: relative;
   }
 
   &:before {
-    transform: translateY(9px);
+    top: 20px;
   }
 
   &:after {
-    transform: translateY(-9px);
-  }
-
-  &:hover {
-    opacity: 0.6;
+    bottom: 20px;
   }
 }
 /* END BUTTONS */

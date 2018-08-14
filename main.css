@@ -1759,22 +1759,23 @@ button {
     display: block;
     content: '';
     width: 35px;
-    position: absolute;
     background-color: #FFF;
     height: 3px;
     left: 0;
     right: 0;
     margin: auto;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    transition: -webkit-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out; }
+  .js-toggle-nav:before, .js-toggle-nav:after {
+    position: absolute; }
+  .js-toggle-nav__line {
+    position: relative; }
   .js-toggle-nav:before {
-    -webkit-transform: translateY(9px);
-            transform: translateY(9px); }
+    top: 20px; }
   .js-toggle-nav:after {
-    -webkit-transform: translateY(-9px);
-            transform: translateY(-9px); }
-  .js-toggle-nav:hover {
-    opacity: 0.6; }
+    bottom: 20px; }
 
 /* END BUTTONS */
 /* BEGIN SITE-LOGO */
@@ -1926,10 +1927,12 @@ button {
         opacity: 0; }
       .primary-nav.opened .js-toggle-nav:after {
         -webkit-transform: rotate(45deg);
-                transform: rotate(45deg); }
+                transform: rotate(45deg);
+        bottom: 30px; }
       .primary-nav.opened .js-toggle-nav:before {
         -webkit-transform: rotate(-45deg);
-                transform: rotate(-45deg); }
+                transform: rotate(-45deg);
+        top: 30px; }
     .primary-nav.opened .primary-nav__menu {
       position: relative;
       width: 80%;
