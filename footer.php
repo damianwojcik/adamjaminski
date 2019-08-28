@@ -77,7 +77,7 @@
                 <div class="col col-2">
 
                     <p class="copy">
-                        <?php echo current_time('Y'); ?> &copy; <a href="http://damianwojcik.it" target="_blank" rel="noopener">damianwojcik.it</a>
+                        <?php echo current_time('Y'); ?> &copy; <a href="http://dwojcik.me" target="_blank" rel="noopener">dwojcik.me</a>
                     </p>
 
                 </div>
