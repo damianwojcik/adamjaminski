@@ -34,17 +34,6 @@
 
 <div class="page-wrapper">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110071487-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-110071487-1');
-</script>
-
-
     <header class="site-header">
 
         <?php get_template_part("partials/section", "top-panel"); ?>

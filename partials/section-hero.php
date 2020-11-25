@@ -23,7 +23,7 @@ if( have_rows('section_hero') ):
 
                         <?php if( ( !empty($photo) ) ): ?>
 
-                            <img class="b-lazy img-person" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="<?php echo $photo['sizes']['medium_large']; ?>" alt="<?php echo $photo['alt']; ?>">
+                            <img class="img-person" src="<?php echo $photo['sizes']['medium_large']; ?>" alt="<?php echo $photo['alt']; ?>">
 
                         <?php endif; ?>
 
